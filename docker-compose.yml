@@ -1,0 +1,16 @@
+version: "3.5"
+services:
+  mdc-partners:
+    container_name: mdc-partners
+    build: .
+    restart: always
+    ports:
+      - "3333:3333"
+    volumes:
+      - .:/app/mdc-partners
+      - node-modules-mdc-partners:/app/mdc-partners/node_modules
+
+
+volumes:
+  node-modules-mdc-partners:
+    name: node-modules-mdc-partners
