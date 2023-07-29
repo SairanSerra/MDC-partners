@@ -5,7 +5,7 @@ services:
     build: .
     restart: always
     ports:
-      - "3333:3333"
+      - "4002:4002"
     volumes:
       - .:/app/mdc-partners
       - node-modules-mdc-partners:/app/mdc-partners/node_modules
