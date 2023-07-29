@@ -11,8 +11,6 @@ services:
    - mysql-network
    - proxy-reverse-network
    - mdc-partners-network
-  env_file:
-    - stack.env
 
 networks:
   mdc-partners-network:
