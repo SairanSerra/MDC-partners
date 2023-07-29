@@ -20,6 +20,8 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
+Route.get('/', 'HealthController.health')
+
 Route.group(() => {
   Route.get('/simple-calculator', 'SimpleCalculatorsController.index')
   Route.get('/prime-number', 'PrimeNumberController.checkNumberIsPrime')
