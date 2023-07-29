@@ -1,0 +1,27 @@
+version: "3.5"
+
+services:
+ mdc-partners:
+  container_name: mdc-partners
+  image: sairan/mdc-partners:latest
+  restart: always
+  ports:
+   - "4002:4002"
+  networks:
+   - mysql-network
+   - proxy-reverse-network
+   - mdc-partners-network
+  env_file:
+    - stack.env
+
+networks:
+  mdc-partners-network:
+   name: mdc-partners-network
+   driver: bridge
+  mysql-network:
+   name: mysql-network
+   external: true
+
+  proxy-reverse-network:
+   name: proxy-reverse-network
+   external: true
