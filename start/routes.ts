@@ -31,5 +31,6 @@ Route.group(() => {
   Route.get('/check-word/polindrome', 'WordPolindromesController.checkWordIsPolindrome')
   Route.get('/count-vowels', 'VowelsController.countVowels')
   Route.get('/student/grade/average', 'StudentGradesController.calculateAverage')
+  Route.get('/table', 'TablesController.table')
   Route.get('/calculate-investment', 'InvestmentsController.calculateInvestment')
 }).prefix('v1')
